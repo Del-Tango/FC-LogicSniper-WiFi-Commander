@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Regards, the Alveare Solutions society.
+#
+
+CONF_FILE_PATH='./conf/logic-sniper.conf'
+
+if [ -f $CONF_FILE_PATH ]; then
+    source $CONF_FILE_PATH
+else
+    echo "[ WARNING ]: System failure. "\
+        "No configuration file found at $CONF_FILE_PATH."
+    exit 1
+fi
+
+./scripts/logic-sniper.sh ./conf/logic-sniper.conf
